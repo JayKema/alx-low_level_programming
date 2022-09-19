@@ -9,6 +9,6 @@ int main(void)
 {
 	char mystr[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	int putchar(mystr);
+	putchar(stderr, &mystr);
 	return (1);
 }
