@@ -7,8 +7,9 @@
  */
 int main(void)
 {
-	char mystr[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char mystr[] = "and that piece of art is useful\" \
+			- Dora Korpar, 2015-10-19\n";
 
-	putchar(&mystr);
+	write(2, mystr, (unsigned long)sizeof(mystr));
 	return (1);
 }
