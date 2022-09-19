@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char mystr[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"
+	char mystr[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
 	echo mystr 2<&1;
 	return (1);
