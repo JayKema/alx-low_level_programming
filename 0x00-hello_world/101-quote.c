@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include <sys/types.h>
+#include <string.h>
 /**
  * main - Entry point
  *
@@ -10,6 +11,6 @@ int main(void)
 	char mystr[] = "and that piece of art is useful\" \
 			- Dora Korpar, 2015-10-19\n";
 
-	write(2, mystr, (unsigned long)sizeof(mystr));
+	write(2, mystr, strlen(mystr));
 	return (1);
 }
