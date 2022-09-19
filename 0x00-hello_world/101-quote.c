@@ -8,6 +8,7 @@
 int main(void)
 {
 	char mystr[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"
+
 	putchar(mystr);
 	return (1);
 }
