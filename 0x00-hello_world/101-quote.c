@@ -9,6 +9,6 @@ int main(void)
 {
 	char mystr[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	echo mystr 2<&1;
+	putchar(mystr);
 	return (1);
 }
