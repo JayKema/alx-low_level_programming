@@ -2,11 +2,12 @@
 /**
  * main - Entry point
  *
- * Return - Always 0 (Sucess)
+ * Description: Prints specified text
+ * Return: 0 always on Sucess
  */
 int main(void)
 {
-	char mystr[] = "Programming is like building a multilingual puzzle";
+	char mystr[] = "Programming is like building a multilingual puzzle\n";
 
 	puts(mystr);
 	return (0);
