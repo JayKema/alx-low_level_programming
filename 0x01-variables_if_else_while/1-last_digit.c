@@ -14,23 +14,23 @@
 
 void last_digit(int n)
 {
-	int digit, last;
+	int n, last;
 
-	digit = n;
+	n = n;
 	last = n % 10;
 	if (last == 0)
 	{
-		printf("Last digit of %d is 0 and is %d\n", digit, last);
+		printf("Last digit of %d is 0 and is %d\n", n, last);
 	}
 	else
 	{
 		if (last > 5)
 		{
-			printf("Last digit of %d is %d and is greater than 5\n", digit, last);
+			printf("Last digit of %d is %d and is greater than 5\n", n, last);
 	}
 		else if ((last < 6) && (last != 0))
 		{
-			printf("Last digit of %d is %d and is less than 6 and not 0\n", digit, last);
+			printf("Last digit of %d is %d and is less than 6 and not 0\n", n, last);
 	}
 	}
 }
