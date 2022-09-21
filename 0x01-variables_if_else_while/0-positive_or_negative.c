@@ -1,5 +1,9 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+
+/* more headers goes there */
+#include <stdio.h>
+
 /**
  * pos_or_neg - Prints sign of integer
  * @parameter: int n
@@ -9,25 +13,37 @@
  * Return: int is positive if int is positive
  */
 
-int pos_or_neg(int n)
+/* betty style doc for function main goes there */
+
+void pos_or_neg(int n)
 {
 	int i;
 	i = n;
 
 	if (i == 0)
 	{
-		printf("%d is zero", i)
+		printf("%d is zero", i);
 	}
 	else
 	{
 		if (i > 0)
 		{
-			printf("%d is positive", i)
+			printf("%d is positive", i);
 		}
 		else 
 		{
-			printf("%d if negative", i)	
+			printf("%d if negative", i);	
 		}
 	}
-	return (0)
+}
+
+int main(void)
+{
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	/* your code goes there */
+	pos_or_neg(n=n);
+	return (0);
 }
