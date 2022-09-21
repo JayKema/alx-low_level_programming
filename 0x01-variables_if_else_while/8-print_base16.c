@@ -18,7 +18,7 @@ int main(void)
 	while (ch < 102)
 	{
 		putchar(ch);
-		i++;
+		ch++;
 	}
 	putchar(10);
 	return (0);
