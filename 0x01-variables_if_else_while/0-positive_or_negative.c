@@ -1,12 +1,10 @@
 #include <stdlib.h>
 #include <time.h>
-
 /* more headers goes there */
 #include <stdio.h>
-
 /**
  * pos_or_neg - Prints sign of integer
- * @parameter: int n
+ * @n: integer n
  *
  * Description: Prints positive, negative, or zero\
  * depending on the sign of the int
@@ -18,8 +16,8 @@
 void pos_or_neg(int n)
 {
 	int i;
-	i = n;
 
+	i = n;
 	if (i == 0)
 	{
 		printf("%d is zero", i);
@@ -30,13 +28,18 @@ void pos_or_neg(int n)
 		{
 			printf("%d is positive", i);
 		}
-		else 
+		else
 		{
-			printf("%d if negative", i);	
+			printf("%d is negative", i);
 		}
 	}
 }
 
+/**
+ * main - code entry point
+ *
+ * Return: 0
+ */
 int main(void)
 {
 	int n;
@@ -44,6 +47,6 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	pos_or_neg(n=n);
+	pos_or_neg(n = n);
 	return (0);
 }
