@@ -14,9 +14,8 @@
 
 void last_digit(int n)
 {
-	int n, last;
+	int last;
 
-	n = n;
 	last = n % 10;
 	if (last == 0)
 	{
