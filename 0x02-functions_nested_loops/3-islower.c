@@ -10,7 +10,7 @@ int _islower(int c)
 {
 	int val;
 
-	val = _putchar(c);
+	val = c;
 	if (val >= 97 && val <= 122)
 	{
 		_putchar('1');
