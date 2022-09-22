@@ -23,7 +23,7 @@ int print_putchar(void)
  * Description: prints _putchar to standar output
  * Return: 0 if sucessful
  */
-void main(void)
+int main(void)
 {
-	print_putchar();
+	return (print_putchar());
 }
