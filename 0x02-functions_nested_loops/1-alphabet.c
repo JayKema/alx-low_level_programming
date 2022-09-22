@@ -1,6 +1,6 @@
-#include <main.h>
+#include "main.h"
 /**
- * main - entry point
+ * print_alphabet - print all alphabets
  *
  * Description: prints alphabets in lower case
  * Return: 0 if successful
@@ -16,5 +16,4 @@ void print_alphabet(void)
 		i++;
 	}
 	_putchar(10);
-	return;
 }
