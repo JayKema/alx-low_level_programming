@@ -13,11 +13,10 @@ int _islower(int c)
 	val = c;
 	if (val >= 97 && val <= 122)
 	{
-		_putchar('1');
+		return (1);
 	}
 	else
 	{
-		_putchar('0');
+		return (0);
 	}
-	return (0);
 }
