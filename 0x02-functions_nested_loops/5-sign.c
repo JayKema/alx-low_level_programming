@@ -4,7 +4,7 @@
  * @c: digit input
  *
  * Description: check and print the sign of an integer
- * Return: +, 1 if c is +ve; 0, 0 if c is 0; -, -1 if c is -ve
+ * Return: + if postive, 0 if 0, and - if negative
  */
 int print_sign(int c)
 {
