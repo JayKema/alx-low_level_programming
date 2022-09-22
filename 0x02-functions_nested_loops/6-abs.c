@@ -13,18 +13,17 @@ int _abs(int c)
 	val = c;
 	if (val == 0)
 	{
-		_putchar('0');
+		return (0);
 	}
 	else
 	{
 		if (val > 0)
 		{
-			_putchar(val);
+			return (val);
 		}
 		else
 		{
-			_putchar(-1 * val);
+			return (-1 * val);
 		}
 	}
-	return (0);
 }
