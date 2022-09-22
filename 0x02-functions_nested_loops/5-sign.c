@@ -15,7 +15,7 @@ int print_sign(int c)
 	{
 		_putchar('0');
 		_putchar(44);
-		_putchar(32)
+		_putchar(32);
 		return (0);
 	}
 	else
