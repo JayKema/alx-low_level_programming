@@ -14,8 +14,6 @@ int print_sign(int c)
 	if (val == 0)
 	{
 		_putchar('0');
-		_putchar(44);
-		_putchar(32);
 		return (0);
 	}
 	else
@@ -23,15 +21,11 @@ int print_sign(int c)
 		if (val > 0)
 		{
 			_putchar(43);
-			_putchar(44);
-			_putchar(32);
 			return (1);
 		}
 		else
 		{
 			_putchar(45);
-			_putchar(44);
-			_putchar(32);
 			return (-1);
 		}
 	}
