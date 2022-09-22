@@ -5,7 +5,7 @@
  * Description: prints alphabets in lower case
  * Return: 0 if successful
  */
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
 	int i, cnt = 10;
 
