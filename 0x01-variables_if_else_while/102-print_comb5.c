@@ -18,7 +18,7 @@ int main(void)
 			{
 				for (pos4 = 48; pos4 <= 57; pos4++)
 				{
-					if (ch + pos2 < pos3 + pos4)
+					if (ch * 10 + pos2 < pos3 * 10 + pos4)
 					{
 						putchar(ch);
 						putchar(pos2);
