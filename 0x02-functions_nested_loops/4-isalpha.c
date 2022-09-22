@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _islower - check if c is an alphabet
+ * _isalpha - check if c is an alphabet
  * @c: letter input
  *
  * Description: check if an input is alphabet
