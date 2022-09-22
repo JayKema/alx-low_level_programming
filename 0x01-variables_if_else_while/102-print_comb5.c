@@ -16,17 +16,20 @@ int main(void)
 		{
 			for (pos3 = 48; pos3 <= 57; pos3++)
 			{
-				for (pos4 = pos2 + 1; pos4 <= 57; pos4++)
+				for (pos4 = 48; pos4 <= 57; pos4++)
 				{
-					putchar(ch);
-					putchar(pos2);
-					putchar(32);
-					putchar(pos3);
-					putchar(pos4);
-					if (!(((ch == 57) && (pos2 == 56)) && ((pos3 == 57) && (pos4 == 57))))
+					if (ch + pos2 < pos3 + pos4)
 					{
-						putchar(44);
+						putchar(ch);
+						putchar(pos2);
 						putchar(32);
+						putchar(pos3);
+						putchar(pos4);
+						if (!(((ch == 57) && (pos2 == 56)) && ((pos3 == 57) && (pos4 == 57))))
+						{
+							putchar(44);
+							putchar(32);
+						}
 					}
 				}
 			}
