@@ -1,0 +1,38 @@
+#include "main.h"
+/**
+ * print_sign - print the sign of a signed integer
+ * @c: digit input
+ *
+ * Description: check and print the sign of an integer
+ * Return: +, 1 if c is +ve; 0, 0 if c is 0; -, -1 if c is -ve
+ */
+int print_sign(int c)
+{
+	int val;
+
+	val = c;
+	if (val == 0)
+	{
+		_putchar('0');
+		_putchar(44);
+		_putchar(32)
+		return (0);
+	}
+	else
+	{
+		if (val > 0)
+		{
+			_putchar(43);
+			_putchar(44);
+			_putchar(32);
+			return (1);
+		}
+		else
+		{
+			_putchar(45);
+			_putchar(44);
+			_putchar(32);
+			return (-1);
+		}
+	}
+}
