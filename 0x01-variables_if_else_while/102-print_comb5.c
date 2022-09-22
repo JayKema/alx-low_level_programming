@@ -20,16 +20,16 @@ int main(void)
 				{
 					if (ch * 10 + pos2 < pos3 * 10 + pos4)
 					{
-						putchar(ch);
-						putchar(pos2);
+					putchar(ch);
+					putchar(pos2);
+					putchar(32);
+					putchar(pos3);
+					putchar(pos4);
+					if (!(((ch == 57) && (pos2 == 56)) && ((pos3 == 57) && (pos4 == 57))))
+					{
+						putchar(44);
 						putchar(32);
-						putchar(pos3);
-						putchar(pos4);
-						if (!(((ch == 57) && (pos2 == 56)) && ((pos3 == 57) && (pos4 == 57))))
-						{
-							putchar(44);
-							putchar(32);
-						}
+					}
 					}
 				}
 			}
