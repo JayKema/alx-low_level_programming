@@ -1,4 +1,5 @@
 #include "main.h"
+int _abs(int);
 /**
  * print_last_digit - print the last digit of an input number
  * @c: digit input
