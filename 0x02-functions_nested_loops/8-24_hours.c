@@ -14,7 +14,7 @@ void jack_bauer(void)
 		if (ht < '2')
 			hu_max = '9';
 		else
-			hu_max = '4';
+			hu_max = '3';
 		for (hu = '0'; hu <= hu_max; hu++)
 		{
 			for (mt = '0'; mt <= '5'; mt++)
