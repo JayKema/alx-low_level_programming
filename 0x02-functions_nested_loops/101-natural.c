@@ -16,3 +16,13 @@ void natural(void)
 	}
 	printf("%d\n", sum);
 }
+/**
+ * main - check code
+ *
+ * Return - Always 0
+ */
+int main(void)
+{
+	natural();
+	return (0);
+}
