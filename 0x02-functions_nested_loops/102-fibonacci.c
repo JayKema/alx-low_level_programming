@@ -36,9 +36,10 @@ void print_fib_terms(int n)
 /**
  * main - check code
  *
- * Return: none
+ * Return: Always 0
  */
-void main(void)
+int main(void)
 {
 	print_fib_terms(50);
+	return (0);
 }
