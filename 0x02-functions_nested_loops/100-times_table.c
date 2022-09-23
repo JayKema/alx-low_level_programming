@@ -12,8 +12,8 @@ void print_digits(int tmp)
 	if (tmp > 99)
 	{
 		unit = tmp % 10;
-		tens = (tmp - unit) / 100 / 10;
-		huns = (tmp - tens * 10) / 100;
+		tens = ((tmp - unit) % 100) / 10;
+		huns = (tmp - tens * 10 - unit) / 100;
 		_putchar('0' + huns);
 		_putchar('0' + tens);
 		_putchar('0' + unit);
