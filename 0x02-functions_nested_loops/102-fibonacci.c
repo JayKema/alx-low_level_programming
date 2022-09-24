@@ -73,6 +73,7 @@ void print_fib_terms(int n, int seed)
 			printf("%d%s%s", val, ",", " ");
 	}
 	if (n > seed)
+	{
 		term = seed;
 		while (term < n)
 		{
@@ -84,6 +85,7 @@ void print_fib_terms(int n, int seed)
 			else
 				printf("%d%s%s", val, ",", " ");
 		}
+	}
 }
 /**
  * main - check code
