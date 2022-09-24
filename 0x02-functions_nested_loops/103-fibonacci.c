@@ -24,7 +24,9 @@ void sum_even_fib_num(int max)
 {
 	int n, val, sum;
 
-	n = 0;
+	val = 0;
+	sum = 0;
+	n = 1;
 	while (val < max)
 	{
 		if (val % 2 == 0)
