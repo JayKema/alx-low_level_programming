@@ -92,6 +92,6 @@ void print_fib_terms(int n, int seed)
  */
 int main(void)
 {
-	print_fib_terms(50, 30);
+	print_fib_terms(98, 30);
 	return (0);
 }
