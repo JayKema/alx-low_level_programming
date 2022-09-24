@@ -7,13 +7,12 @@
  */
 void print_fib_terms(unsigned long n)
 {
-	unsigned long t, t1, t2, tn;
+	int t, overflow;
+	unsigned long t1, t2;
 	long t1_head, t1_tail, t2_head, t2_tail, tn_tail, tn_head;
-	int overflow;
 
 	t1 = 1;
 	t2 = 2;
-	tn = t1 + t2;
 	if (n > 2)
 	{
 		printf("%d, %d, ", 1, 2);
