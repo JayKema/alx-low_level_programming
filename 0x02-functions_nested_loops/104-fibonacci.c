@@ -1,11 +1,11 @@
 #include <stdio.h>
 /**
  * print_fib_terms - print fibonacci terms
- * @n: long length of fibonacci sequence
+ * @n: int length of fibonacci sequence
  *
  * Return: prints comma delimited fib sequence
  */
-void print_fib_terms(unsigned long n)
+void print_fib_terms(int n)
 {
 	int t, overflow;
 	unsigned long t1, t2;
