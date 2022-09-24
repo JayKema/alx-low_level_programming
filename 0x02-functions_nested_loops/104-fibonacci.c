@@ -1,13 +1,13 @@
 #include <stdio.h>
 /**
  * print_fib_terms - print fibonacci terms
- * @n: unsigned long long length of fibonacci sequence
+ * @n: long length of fibonacci sequence
  *
  * Return: prints comma delimited fib sequence
  */
-void print_fib_terms(double n)
+void print_fib_terms(unsigned long n)
 {
-	double t, t1, t2, tn;
+	unsigned long t, t1, t2, tn;
 
 	t1 = 1;
 	t2 = 2;
@@ -15,18 +15,18 @@ void print_fib_terms(double n)
 	for (t = 1; t <= 2; t++)
 	{
 		if (t == n)
-			printf("%.0lf\n", t);
+			printf("%lu\n", t);
 		else
-			printf("%.0lf%s%s", t, ",", " ");
+			printf("%lu%s%s", t, ",", " ");
 	}
 	if (n > 2)
 	{
 		for (t = 3; t <= n; t++)
 		{
 			if (t == n)
-				printf("%.0lf\n", tn);
+				printf("%lu\n", tn);
 			else
-				printf("%.0lf%s%s", tn, ",", " ");
+				printf("%lu%s%s", tn, ",", " ");
 			t1 = t2;
 			t2 = tn;
 			tn = t1 + t2;
