@@ -1,89 +1,35 @@
 #include <stdio.h>
 /**
- * fibonacci - prints fibonacci numbers
- * @n:number of terms
- *
- * Return: Always greater than 0
- */
-int fibonacci(int n)
-{
-	if (n == 1)
-		return (1);
-	else if (n == 2)
-		return (2);
-	else
-		return ((fibonacci(n - 1) + fibonacci(n - 2)));
-}
-/**
- * fib - compute new fibonacci term base on previous, non-base term
- * @base: pseudo-base term, int
- * @value: value of pseudo-base term
- * @prev: value of term preceding pseudo-base term
- * @new: int new fib term to be computed
- *
- * Return: integer value > 0
- */
-int fib(int base, int value, int prev, int new)
-{
-	int result;
-
-	if (base > new)
-	{
-		return (fibonacci(new));
-	}
-	else
-	{
-		if (new == base - 1)
-		{
-			return (prev);
-		}
-		else if (new == base)
-		{
-			return (value);
-		}
-		else
-		{
-			result = fib(base, value, prev, new - 1) + fib(base, value, prev, new - 2);
-			return (result);
-		}
-	}
-}
-
-
-/**
  * print_fib_terms - print fibonacci terms
  * @n: int length of fibonacci sequence
- * @seed: int fibonacci term use to compute init fib sequence
  *
  * Return: prints comma delimited fib sequence
  */
-void print_fib_terms(int n, int seed)
+void print_fib_terms(int n)
 {
-	int val, term, prev;
+	unsigned long t, t1, t2, tn;
 
-	if (seed == 0)
-		seed = n;
-	for (term = 1; term <= seed; term++)
+	t1 = 1;
+	t2 = 2;
+	tn = t1 + t2;
+	for (t = 1; t <= 2; t++)
 	{
-		prev = val;
-		val = fibonacci(term);
-		if (term == n)
-			printf("%d\n", val);
+		if (t == n)
+			printf("%lu\n", t);
 		else
-			printf("%d%s%s", val, ",", " ");
+			printf("%lu%s%s", t, ",", " ");
 	}
-	if (n > seed)
+	if (n > 2)
 	{
-		term = seed;
-		while (term < n)
+		for (t = 3; t <= n; t++)
 		{
-			prev = val;
-			val = fib(term, val, prev, term + 1);
-			term++;
-			if (term == n)
-				printf("%d\n", val);
+			if (t == n)
+				printf("%lu\n", tn);
 			else
-				printf("%d%s%s", val, ",", " ");
+				printf("%lu%s%s", tn, ",", " ");
+			t1 = t2;
+			t2 = tn;
+			tn = t1 + t2;
 		}
 	}
 }
@@ -94,6 +40,6 @@ void print_fib_terms(int n, int seed)
  */
 int main(void)
 {
-	print_fib_terms(50, 30);
+	print_fib_terms(50);
 	return (0);
 }
