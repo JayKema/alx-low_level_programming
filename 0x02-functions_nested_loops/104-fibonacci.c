@@ -8,28 +8,42 @@
 void print_fib_terms(unsigned long n)
 {
 	unsigned long t, t1, t2, tn;
+	long t1_head, t1_tail, t2_head, t2_tail, tn_tail, tn_head;
+	int overflow;
 
 	t1 = 1;
 	t2 = 2;
 	tn = t1 + t2;
-	for (t = 1; t <= 2; t++)
-	{
-		if (t == n)
-			printf("%lu\n", t);
-		else
-			printf("%lu%s%s", t, ",", " ");
-	}
 	if (n > 2)
 	{
+		printf("%d, %d, ", 1, 2);
+		t1_head = t1 / 1000000000;
+		t1_tail = t1 % 1000000000;
+		t2_head = t2 / 1000000000;
+		t2_tail = t2 % 1000000000;
 		for (t = 3; t <= n; t++)
 		{
-			if (t == n)
-				printf("%lu\n", tn);
+			overflow = (t1_tail + t2_tail) / 1000000000;
+			tn_tail = (t1_tail + t2_tail) - (1000000000 * overflow);
+			tn_head = (t1_head + t2_head) + overflow;
+			if (tn_head == 0)
+			{
+				if (t == n)
+					printf("%ld\n", tn_tail);
+				else
+					printf("%ld%s%s", tn_tail, ",", " ");
+			}
 			else
-				printf("%lu%s%s", tn, ",", " ");
-			t1 = t2;
-			t2 = tn;
-			tn = t1 + t2;
+			{
+				if (t == n)
+					printf("%ld%ld\n", tn_head, tn_tail);
+				else
+					printf("%ld%ld%s%s", tn_head, tn_tail, ",", " ");
+			}
+			t1_head = t2_head;
+			t1_tail = t2_tail;
+			t2_head = tn_head;
+			t2_tail = tn_tail;
 		}
 	}
 }
