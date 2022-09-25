@@ -9,17 +9,16 @@ void print_diagonal(int n)
 {
 	int i, spc;
 
-	i = 0;
 	if (n <= 0)
 	{
 		_putchar(10);
 	}
 	else
 	{
-		for (i = 0; i < n; i++)
+		for (i = 1; i <= n; i++)
 		{
-			spc = 1; /*print i - 1 spaces b4 diagonal*/
-			while (spc < i - 1)
+			spc = 0; /*print i - 1 spaces b4 diagonal*/
+			while (spc < i)
 			{
 				_putchar(32);
 				spc++;
