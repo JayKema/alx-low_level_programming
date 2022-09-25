@@ -10,6 +10,7 @@ void more_numbers(void)
 
 	for (i = 1; i <= 10; i++)
 	{
+		tmp = 0;
 		while (tmp < 15)
 		{
 			unit = tmp % 10;
