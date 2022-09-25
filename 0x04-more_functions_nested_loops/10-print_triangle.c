@@ -18,7 +18,7 @@ void print_triangle(int n)
 		for (i = 1; i <= n; i++)
 		{
 			pnd = i;
-			spc = 1; /*print i - 1 spaces b4 diagonal*/
+			spc = 0; /*print i - 1 spaces b4 diagonal*/
 			while (spc < n - pnd)
 			{
 				_putchar(32);

@@ -25,7 +25,7 @@ void print_diagonal(int n)
 				spc++;
 			}
 			_putchar(92);
+			_putchar(10);
 		}
-		_putchar(10);
 	}
 }

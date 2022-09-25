@@ -20,10 +20,10 @@ void print_square(int n)
 			i = 0;
 			while (i < n)
 			{
-				_putchar(95);
+				_putchar(35);
 				i++;
 			}
 			_putchar(10);
 		}
 	}
-}
+i}
