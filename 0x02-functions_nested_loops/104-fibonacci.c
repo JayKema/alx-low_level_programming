@@ -23,10 +23,11 @@ void print_fib_terms(int n)
 		for (t = 3; t <= n; t++)
 		{
 			overflow = (t1_tail + t2_tail) / 1000000000;
-			tn_tail = (t1_tail + t2_tail) - (1000000000 * overflow);
+			tn_tail = (t1_tail + t2_tail) % 1000000000;
 			tn_head = (t1_head + t2_head) + overflow;
 			if (tn_head == 0)
 			{
+				tn_tail = tn_tail + (1000000000 * overflow);
 				if (t == n)
 					printf("%ld\n", tn_tail);
 				else
@@ -35,9 +36,9 @@ void print_fib_terms(int n)
 			else
 			{
 				if (t == n)
-					printf("%ld%ld\n", tn_head, tn_tail);
+					printf("%ld%09ld\n", tn_head, tn_tail);
 				else
-					printf("%ld%ld%s%s", tn_head, tn_tail, ",", " ");
+					printf("%ld%09ld%s%s", tn_head, tn_tail, ",", " ");
 			}
 			t1_head = t2_head;
 			t1_tail = t2_tail;
