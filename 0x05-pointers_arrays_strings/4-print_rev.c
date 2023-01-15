@@ -9,6 +9,7 @@ int _putchar(char c);
 void print_rev(char *s)
 {
 	int counter;
+	int lst;
 
 	counter = 0;
 	while (1)
@@ -17,10 +18,11 @@ void print_rev(char *s)
 			break;
 		counter++;
 	}
+	lst = counter + 1;
 	while (counter >= 0)
 	{
 		_putchar((*(s + counter)));
 		counter--;
 	}
-	_putchar('\n');
+	_putchar((*(s + lst)));
 }
