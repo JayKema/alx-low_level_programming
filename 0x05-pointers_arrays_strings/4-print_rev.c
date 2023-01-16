@@ -19,7 +19,6 @@ void print_rev(char *s)
 	{
 		if (counter == 0)
 		{	_putchar((*(s + counter)));
-			_putchar(13);
 		}
 		else
 		{
