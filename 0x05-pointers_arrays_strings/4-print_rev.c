@@ -9,20 +9,16 @@ int _putchar(char c);
 void print_rev(char *s)
 {
 	int counter;
-	int lst;
 
 	counter = 0;
-	while (1)
+	while ((*(s + counter)) != '\0')
 	{
-		if ((*(s + counter)) == '\0')
-			break;
 		counter++;
 	}
-	lst = counter + 1;
 	while (counter >= 0)
 	{
 		_putchar((*(s + counter)));
 		counter--;
 	}
-	_putchar((*(s + lst)));
+	_putchar(10);
 }
