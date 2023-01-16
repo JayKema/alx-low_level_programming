@@ -18,9 +18,13 @@ void print_rev(char *s)
 	while (counter >= 0)
 	{
 		if (counter == 0)
-			_putchar((*(s + counter)) + '\n');
+		{	_putchar((*(s + counter)));
+			_putchar(10);
+		}
 		else
+		{
 			_putchar((*(s + counter)));
+		}
 		counter--;
 	}
 }
