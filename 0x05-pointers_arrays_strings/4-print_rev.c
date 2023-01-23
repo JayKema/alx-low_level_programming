@@ -8,7 +8,7 @@ int _putchar(char c);
  */
 void print_rev(char *s)
 {
-	int counter=0;
+	int counter = 0;
 
 	while ((*(s + counter)) != '\0')
 	{
