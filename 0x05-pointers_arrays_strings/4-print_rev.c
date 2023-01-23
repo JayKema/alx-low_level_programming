@@ -8,23 +8,16 @@ int _putchar(char c);
  */
 void print_rev(char *s)
 {
-	int counter;
+	int counter=0;
 
-	counter = 0;
 	while ((*(s + counter)) != '\0')
 	{
 		counter++;
 	}
-	while (counter >= 0)
+	while (counter > 0)
 	{
-		if (counter == 0)
-		{	_putchar((*(s + counter)));
-		}
-		else
-		{
-			_putchar((*(s + counter)));
-		}
 		counter--;
+		_putchar(s[counter])
 	}
 	_putchar('\n');
 }

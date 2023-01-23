@@ -8,10 +8,25 @@
  */
 void rev_string(char *s)
 {
-	char *a;
+	int cnt;
+	int j;
+	int temp;
+	int len;
+	
+	while ((*(s + cnt)) != '\0')
+	{
+		cnt++;
+	}
 
-	while ((*a++ = *s++))
-		;
-	printf("a is %ld\n", sizeof(a));
-	printf("s is %ld\n", sizeof(s));
+	len = cnt;
+	cnt = 0;
+	j = len - 1;
+	while (cnt <  j)
+	{
+		temp = s[cnt];
+		s[cnt] = s[j];
+		s[j] = temp;
+		cnt++;
+		j--;
+	}
 }
