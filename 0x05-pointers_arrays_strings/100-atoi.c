@@ -13,7 +13,7 @@ int _atoi(char *s)
 	char temp;
 	int sign = 1;
 	unsigned int max = 2147483647;
-	int overflow;
+	unsigned int overflow;
 
 	while (s[i] != '\0')
 	{
@@ -35,11 +35,13 @@ int _atoi(char *s)
 	{
 		if (num > max)
 		{
-			overflow = (int)(num - max);
+			overflow = num - max;
 			num = num - overflow;
-			num = (sign * (signed int)num) + (sign * overflow);
+			num = (sign * (signed int)num) + (sign * (signed int)overflow);
+			return (num);
 		}
-		return (num);
+		else
+			return (sign * (signed int)num);
 	}
 	else
 	{
