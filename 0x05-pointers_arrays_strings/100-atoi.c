@@ -36,7 +36,7 @@ int _atoi(char *s)
 		if (num > max)
 		{
 			overflow = num % max;
-			num = (sign * (signed int)max) + (sign * (signed int)overflow);
+			num = (sign * max) + (sign * overflow);
 			return (num);
 		}
 		else
