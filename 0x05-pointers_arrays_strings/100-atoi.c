@@ -16,10 +16,10 @@ int _atoi(char *s)
 	while (s[i] != '\0')
 	{
 		temp = s[i];
+		if (s[i] == '-')
+			sign = sign * (-1);
 		if (temp >= 48 && temp <= 57)
 		{
-			if ((sign == 1) && (s[i - 1] == '-'))
-				sign = -1;
 			if (num > 0)
 				num  =  (num * 10) + (int)(temp - '0');
 			else
