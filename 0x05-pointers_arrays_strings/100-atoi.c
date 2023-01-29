@@ -23,9 +23,9 @@ int _atoi(char *s)
 		if (temp >= 48 && temp <= 57)
 		{
 			if (num > 0)
-				num  =  (num * 10) + (int)(temp - '0');
+				num  =  (num * 10) + (unsigned int)(temp - '0');
 			else
-				num  =  (num) + (int)(temp - '0');
+				num  =  (num) + (unsigned int)(temp - '0');
 			if (s[i + 1] < 48 || s[i + 1] > 57)
 				break;
 		}
