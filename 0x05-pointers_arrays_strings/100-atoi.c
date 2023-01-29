@@ -8,10 +8,12 @@
  */
 int _atoi(char *s)
 {
-	int num = 0;
+	unsigned int num = 0;
 	int i = 0;
 	char temp;
 	int sign = 1;
+	unsigned int max = 2147483647;
+	int overflow;
 
 	while (s[i] != '\0')
 	{
@@ -23,14 +25,24 @@ int _atoi(char *s)
 			if (num > 0)
 				num  =  (num * 10) + (int)(temp - '0');
 			else
-				num  = num + (int)(temp - '0');
+				num  =  (num) + (int)(temp - '0');
 			if (s[i + 1] < 48 || s[i + 1] > 57)
 				break;
 		}
 		i++;
 	}
 	if (num != 0)
-		return (sign * num);
+	{
+		if (num > max)
+		{
+			overflow = (int)(num - max);
+			num = num - overflow;
+			num = (sign * (signed int)num) + (sign * overflow);
+		}
+		return (num);
+	}
 	else
+	{
 		return (0);
+	}
 }
