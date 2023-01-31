@@ -31,7 +31,10 @@ char *_strncpy(char *dest, char *src, int n)
 	for (i = 0; i < n && i <= src_len; i++)
 	{
 		if ((i > dest_len - 1) || src[i] == '\n')
+		{
+			dest[i] = '\0';
 			break;
+		}
 		dest[i] = src[i];
 	}
 	return (dest);
