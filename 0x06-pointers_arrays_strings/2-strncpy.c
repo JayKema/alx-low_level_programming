@@ -25,11 +25,12 @@ int _strlen(char *str)
 char *_strncpy(char *dest, char *src, int n)
 {
 	int dest_len = _strlen(dest);
+	int src_len = _strlen(dest);
 	int i;
 
-	for (i = 0; i < n &&  src[i] != '\0'; i++)
+	for (i = 0; i < n && i <= src_len; i++)
 	{
-		if (i > dest_len - 1)
+		if ((i > dest_len - 1) || src[i] == '\n')
 			break;
 		dest[i] = src[i];
 	}
