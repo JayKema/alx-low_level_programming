@@ -32,7 +32,7 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		if ((i > dest_len - 1) || src[i] == '\n')
 		{
-			dest[i] = '\n';
+			dest[i] = '\n\0';
 			break;
 		}
 		dest[i] = src[i];
