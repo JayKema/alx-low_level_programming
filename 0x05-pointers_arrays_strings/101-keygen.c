@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 
 #define MAX_PASSWORD_LENGTH 10
@@ -45,8 +46,8 @@ int main(void)
 {
 	char password[MAX_PASSWORD_LENGTH + 1];
 	srand(time(NULL)); /*Initialize the rand with the current time*/
-
+	
 	generateRandomPassword(password);
-	fputs(password, stdout);
+	printf("%s\n", password);
 	return (EXIT_SUCCESS);
 }
