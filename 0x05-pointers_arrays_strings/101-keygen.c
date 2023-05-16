@@ -28,8 +28,9 @@ char generateRandomChar(void)
 void generateRandomPassword(char *password)
 {
 	int length = rand() % MAX_PASSWORD_LENGTH + 1;
+	int i;
 
-	for (int i = 0; i < length; i++)
+	for (i = 0; i < length; i++)
 	{
 		password[i] = generateRandomChar();
 	}
@@ -42,8 +43,8 @@ void generateRandomPassword(char *password)
  */
 int main(void)
 {
-	srand(time(NULL)); /*Initialize the rand with the current time*/
 	char password[MAX_PASSWORD_LENGTH + 1];
+	srand(time(NULL)); /*Initialize the rand with the current time*/
 
 	generateRandomPassword(password);
 	fputs(password, stdout);
