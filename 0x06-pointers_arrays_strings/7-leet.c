@@ -14,20 +14,16 @@ char *leet(char *str)
 	while (*ptr != '\0')
 	{
 		int i = 0;
-		int found = 0;
 
 		while (leetChars[i] != '\0')
 		{
 			if (*ptr == leetChars[i])
 			{
 				*ptr = leetCodes[i];
-				found = 1;
 				break;
 			}
 			i++;
 		}
-		if (!found)
-			ptr++;
 		ptr++;
 	}
 	return (str);
