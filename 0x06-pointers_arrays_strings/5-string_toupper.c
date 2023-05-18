@@ -3,7 +3,7 @@
 #define LOW_UP_BOUND 122
 #define LOW_LOW_BOUND 97
 /**
- * string_toupper: transforms lowercase to uppercase
+ * string_toupper - transforms lowercase to uppercase
  * @str: pointer to string
  *
  * Return: modified char
